@@ -40,3 +40,7 @@ nginx主docker连接redis和mysql时，直接使用redis和mysql这两个名称�
 mysql -h mysql -u root -p
 redis-cli -h redis
 ```
+
+# 测试
+
+增加解析 127.0.0.1 docker.test，并测试域名
