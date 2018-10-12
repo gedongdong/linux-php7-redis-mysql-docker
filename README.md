@@ -29,8 +29,8 @@ docker-compose up -d
 
 # 目录说明
 
-/Users/tal/web：本地物理路径，映射到docker中的/var/www/目录，web项目存放在此目录
-/Users/tal/mysql-data：本地物理路径，映射到docker中的/var/lib/mysql/目录，mysql的数据目录存放于此
+* /Users/tal/web：本地物理路径，映射到docker中的/var/www/目录，web项目存放在此目录
+* /Users/tal/mysql-data：本地物理路径，映射到docker中的/var/lib/mysql/目录，mysql的数据目录存放于此
 
 # 其它说明
 
