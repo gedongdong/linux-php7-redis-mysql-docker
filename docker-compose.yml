@@ -1,0 +1,40 @@
+version: '2'
+networks:
+  lnmp:
+    driver: bridge
+services:
+  nginx:
+    build: nginx-php7
+    restart: always
+    networks:
+      - lnmp
+    volumes:
+      - /Users/tal/web:/var/www
+    depends_on:
+      - redis
+      - mysql
+    links:
+      - redis
+      - mysql
+    ports:
+      - "80:80"
+      - "443:443"
+  redis:
+    build: redis
+    restart: always
+    networks:
+      - lnmp
+    ports:
+      - "6379:6379"
+  mysql:
+    image: mysql:5.7
+    restart: always
+    networks:
+      - lnmp
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - /Users/tal/mysql-data:/var/lib/mysql
