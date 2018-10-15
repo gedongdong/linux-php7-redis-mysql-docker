@@ -15,8 +15,8 @@ RUN apk update && apk add --no-cache nginx
 RUN mkdir -p /run/nginx && mkdir -p /shell
 
 # 外部文件
-COPY conf /etc/nginx/conf.d/
-COPY cert /etc/nginx/
+COPY conf/* /etc/nginx/conf.d/
+COPY cert/* /etc/nginx/
 COPY start.sh /shell
 RUN chmod -R 777 /shell
 
