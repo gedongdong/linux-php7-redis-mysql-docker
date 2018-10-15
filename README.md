@@ -11,7 +11,8 @@
 # 构建及运行方式
 
 ```
-#根据 docker-compose.yml 文件构建docker镜像
+#将自定义的虚拟主机配置文件和证书文件放在指定目录中
+#然后根据 docker-compose.yml 文件构建docker镜像，执行以下命令
 docker-compose build
 ```
 
